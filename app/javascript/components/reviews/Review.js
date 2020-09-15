@@ -5,10 +5,12 @@ class Review extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <h2>{ this.props.title }</h2>
-        <p>{ this.props.rating }</p>
-        <p>{ this.props.comment }</p>
-        <p>{ this.props.posted_at }</p>
+        <div className="review">
+          <h2 className="review-text">{ this.props.title }</h2>
+          <p>{ this.props.rating }</p>
+          <p>{ this.props.comment }</p>
+          <p>{ this.props.posted_at }</p>
+        </div>
       </React.Fragment>
     );
   }
