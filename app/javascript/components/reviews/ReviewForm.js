@@ -2,11 +2,32 @@ import React from "react"
 import PropTypes from "prop-types"
 
 class ReviewForm extends React.Component {
-  render () {
+  buildGameOptions() {
+    let gameOptions = this.props.games.map(function(nameId) {
+      return <option key={nameId[1]} value={nameId[1]}>{ nameId[0] }</option>
+    });
+
+    return gameOptions
+  }
+
+  handleSubmit(event) {
+    event.preventDefault()
+    alert('Form submitted')
+  }
+
+  render() {
     return (
       <React.Fragment>
-        <form width="50%">
+        <form onSubmit={ this.handleSubmit }>
           <div>
+            <label htmlFor="games">
+              Games
+            </label>
+            <select name="game_id">
+              { this.buildGameOptions() }
+            </select>
+
+
             <label htmlFor="rating">
               Rating
             </label>
@@ -23,6 +44,10 @@ class ReviewForm extends React.Component {
 
             <label htmlFor="posted_on">Date</label>
             <input type="date" name="posted_on" />
+
+            <input type="hidden" name="user_id" value={ this.props.user_id } />
+
+            <input type="submit" />
           </div>
         </form>
       </React.Fragment>

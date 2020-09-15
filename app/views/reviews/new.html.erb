@@ -1,0 +1,10 @@
+<h2>New Review</h2>
+
+<%=
+  react_component(
+    "reviews/ReviewForm",
+    user_id: @user.id,
+    games: @games.pluck(:name, :id),
+    ratings: Review::RATINGS
+  )
+%>

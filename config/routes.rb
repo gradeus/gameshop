@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root to: 'reviews#index'
+  root to: redirect('/reviews')
   resources :reviews
 end
