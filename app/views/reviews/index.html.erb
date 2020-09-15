@@ -1,1 +1,2 @@
-<%= react_component "reviews/ReviewList", reviews: @reviews %>
+
+<%= react_component "reviews/ReviewList", reviews: ReviewSerializer.new(@reviews).serializable_hash %>
