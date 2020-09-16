@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import axios from "axios"
 import { getCSRFToken } from "../utils";
 
@@ -13,6 +14,7 @@ class ReviewForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault()
+
     let formData = new FormData(event.target)
     let formEntries = Object.fromEntries(formData)
 
@@ -25,8 +27,10 @@ class ReviewForm extends React.Component {
           'X-CSRF-TOKEN': getCSRFToken()
         }
       }
-    ).then((response) => {
+    ).then(response => {
       alert(response.data)
+    }).catch(error => {
+      alert(error.response.data)
     })
   }
 
@@ -66,5 +70,11 @@ class ReviewForm extends React.Component {
     );
   }
 }
+
+ReviewForm.propTypes = {
+  user_id: PropTypes.number,
+  games: PropTypes.array,
+  posted_at: PropTypes.string
+};
 
 export default ReviewForm

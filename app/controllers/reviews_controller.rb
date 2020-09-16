@@ -15,7 +15,7 @@ class ReviewsController < ApplicationController
       render json: 'Review created successfully!', status: :created
     else
       message = "Couldn't create your review. #{@review.errors.full_messages.to_sentence}"
-      render json: message, status: :unprocessarble_entity
+      render json: message, status: :unprocessable_entity
     end
   end
 
