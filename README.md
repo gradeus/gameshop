@@ -20,3 +20,16 @@ woud like to try or buy.
 ## Domain model
 
 ![Alt text](/erd.png?raw=true)
+
+## Challenges
+
+1. Create a way for our reviewers to delete reviews.
+    - Make sure that users can only delete their own reviews
+    - Should we have a moderator? Create a super admin who can delete reviews and
+      modify them. How would you do it?
+    - Use React for all calls to the server
+    - Remember to add specs
+2. Send a welcome email via Sendgrid and ActiveMailer to brand new accounts
+3. The videogames genre could be split into more categories, like pc games, SNES, PS4.
+  How would you add more functionality and genres to this? Would you change the code base to use something like a polymorphic association, or STI?
+4. How would you devise a system in which our users get a newsletter of the top 10 reviews in our community every month?
