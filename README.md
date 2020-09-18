@@ -16,6 +16,7 @@ woud like to try or buy.
 
 ... and that's all! Now go to `http://localhost:3000` and be part of our community.
 
+**NOTE:** Remember to install any missing JS pacakges with `yarn` if necessary
 
 ## Domain model
 
