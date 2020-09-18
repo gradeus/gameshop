@@ -29,6 +29,7 @@ class ReviewForm extends React.Component {
       }
     ).then(response => {
       alert(response.data)
+      window.location.href = "/reviews"
     }).catch(error => {
       alert(error.response.data)
     })

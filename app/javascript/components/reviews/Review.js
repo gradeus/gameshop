@@ -15,13 +15,19 @@ class Review extends React.Component {
   }
 
   render () {
+    console.log(this.props.user_name)
     return (
       <React.Fragment>
         <div className="review">
           <h2 className="review-text">{ this.props.title }</h2>
           <p>{ this.renderRating() }</p>
           <p>{ this.props.comment }</p>
-          <p>{ this.props.posted_at }</p>
+          <br />
+          <p>
+            <i>{ this.props.user_name }</i>
+            <br />
+            <small>{ this.props.posted_at }</small>
+          </p>
         </div>
       </React.Fragment>
     );

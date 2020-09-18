@@ -1,10 +1,10 @@
 class ReviewsController < ApplicationController
   def index
     @reviews = Review.order(created_at: :desc)
+    @reviews = ReviewSerializer.new(@reviews).serializable_hash
   end
 
   def new
-    @user = User.first
     @games = Game.all
   end
 

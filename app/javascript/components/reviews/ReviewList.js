@@ -10,7 +10,8 @@ class ReviewList extends React.Component {
           key={ review.id }
           title={ review.attributes.game_name }
           rating={ review.attributes.rating }
-          comment={ review.attributes.comment}
+          comment={ review.attributes.comment }
+          user_name={ review.attributes.user_name }
           posted_at={ review.attributes.posted_at }
         />
       )

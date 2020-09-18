@@ -1,2 +1,2 @@
 <%= button_to "+ New", new_review_path, method: :get %>
-<%= react_component "reviews/ReviewList", reviews: ReviewSerializer.new(@reviews).serializable_hash %>
+<%= react_component "reviews/ReviewList", reviews: @reviews %>
