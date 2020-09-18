@@ -14,9 +14,9 @@ woud like to try or buy.
 4. `$ rails db:setup` (This will also run the `seeds` for you)
 5. `$ rails s`
 
-... and that's all! Now go to `http://localhost:3000` and start making part of our community.
+... and that's all! Now go to `http://localhost:3000` and be part of our community.
 
 
 ## Domain model
 
-![Alt text](/erd.pdf?raw=true)
+![Alt text](/erd.png?raw=true)
