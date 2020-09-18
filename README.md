@@ -15,3 +15,8 @@ woud like to try or buy.
 5. `$ rails s`
 
 ... and that's all! Now go to `http://localhost:3000` and start making part of our community.
+
+
+## Domain model
+
+![Alt text](/erd.pdf?raw=true)
